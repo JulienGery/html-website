@@ -1,0 +1,78 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>faire des mods sur Terraria</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="icon" href="githubfav.png" />
+		<meta content='https://julien.gery.me/' property='og:title'>
+	</head>
+	<body>
+		
+		<h1>faire des mods sur Terraria (en C#)</h1>
+		<div class="introduction">pour faire des mods sur <a href="https://terraria-fr.gamepedia.com/Terraria_Wiki">terraria</a> la communauté a créé un mod pour faire des mods (<a href="https://github.com/tModLoader/tModLoader">tmodloader</a>)</div><br>
+		avec ce mod on peut faire<br><br>
+		<ul>
+			<li>des objets personnalisés</li>
+			<li>des armes</li>
+			<li>des sceptres</li>	
+			<li>des recettes</li>
+			<li><a href="#" class="btn"><audio id="sound1" src="musiquesnt.mp3"></audio><span class="left title" onclick="joue('musiquesnt.mp3')">des musiques</span></a></li>
+			<li>et bien d'autres</li>
+		</ul><br>
+
+
+		<span class="introcode">tout cela se fait en C#</span><br><br>
+		<div class="code">
+			<span class="codered">using</span> <span class="codeblue">Terraria;</span><br>
+			<span class="codered">using</span> <span class="codeblue">Terraria.ID;<br></span>
+			<span class="codered">using</span> <span class="codeblue">Terraria.ModLoader;<br></span>
+
+			<span class="codered">namespace</span> <span class="codeblue">ModNamespaceHere<br></span>
+			{<br>
+				<blockquote> <span class="codered">public class</span> <span class="codeblue">NameHere : ModItem<br></span>
+					{<br>
+						<blockquote>
+							<span class="codered">public override void</span> <span class="codeblue">SetStaticDefaults()<br></span>
+							{<br>
+								<blockquote>Tooltip.<span class="codeblue">SetDefault</span>("This is a modded item.");<br></blockquote>
+							}<br>
+
+							<span class="codered">public override void</span> <span class="codeblue">SetDefaults</span>()<br>
+							{<br>
+								<blockquote>item.width = 20;<br>
+									item.height <span class="codered">=</span> <span class="codeblue">20</span>;<br>
+									item.maxStack <span class="codered">=</span> <span class="codeblue">999</span>;<br>
+									item.value <span class="codered">=</span> <span class="codeblue">100</span>;<br>
+									item.rare <span class="codered">=</span> <span class="codeblue">1</span>;<br>
+									// Set other item.X values here<br></blockquote>
+								}<br>
+
+								<span class="codered">public override void</span> <span class="codeblue">AddRecipes</span>()<br>
+								{<br>
+									// Recipes here. See Basic Recipe Guide<br>
+								}<br></blockquote>
+							}<br></blockquote>
+						}<br>
+
+					</div>
+					<div class="explication">
+						les mots <a href="https://docs.microsoft.com/fr-fr/dotnet/csharp/language-reference/keywords/public">public</a> nous donne son niveau d'accès, <a href="https://docs.microsoft.com/fr-fr/dotnet/csharp/language-reference/builtin-types/void">void</a> son type, <a href="https://docs.microsoft.com/fr-fr/dotnet/csharp/language-reference/keywords/override">override</a> veut dire que l'on modifie la méthode 
+
+
+
+
+					</div>
+					<script type="text/javascript">
+						function joue(audioFile){
+							var audie = document.getElementById("sound1");
+							if (audie.paused == false)
+								audie.pause();
+							else
+								audie.play();
+
+						}
+
+
+					</script>
+				</body>
+				</html>
